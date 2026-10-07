@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Job Finder</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span class="logo-icon">
+                SJ
+            </span>
+
+            <div>
+
+                <h1>
+                    Smart Job Finder
+                </h1>
+
+                <p>
+                    Find your next opportunity
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                🚀 Job Search Platform
+            </span>
+
+
+            <h2>
+                Find the right job.<br>
+                Start your career.
+            </h2>
+
+
+            <p>
+                Search jobs from multiple sources and discover
+                opportunities based on your skills, location,
+                experience and posting date.
+            </p>
+
+        </div>
+
+
+
+        <!-- SEARCH BOX -->
+
+        <div class="search-box">
+
+
+            <!-- ROLE -->
+
+            <div class="input-group">
+
+                <label for="role">
+                    Job Role
+                </label>
+
+                <input
+                    type="text"
+                    id="role"
+                    placeholder="e.g. Python Developer"
+                >
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="input-group">
+
+                <label for="city">
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="e.g. Hyderabad"
+                >
+
+            </div>
+
+
+
+            <!-- EXPERIENCE -->
+
+            <div class="input-group">
+
+                <label for="experience">
+                    Experience
+                </label>
+
+                <select id="experience">
+
+                    <option value="all">
+                        All
+                    </option>
+
+                    <option value="entry">
+                        Entry Level
+                    </option>
+
+                    <option value="specified">
+                        Experience Specified
+                    </option>
+
+                    <option value="unknown">
+                        Not Specified
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- POSTED -->
+
+            <div class="input-group">
+
+                <label for="posted">
+                    Posted
+                </label>
+
+                <select id="posted">
+
+                    <option value="all">
+                        Any time
+                    </option>
+
+                    <option value="24h">
+                        Last 24 hours
+                    </option>
+
+                    <option value="7d">
+                        Last 7 days
+                    </option>
+
+                    <option value="30d">
+                        Last 30 days
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- SEARCH BUTTON -->
+
+            <button id="searchButton">
+                Search Jobs
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+
+        <!-- RESULTS HEADER -->
+
+        <div class="results-header">
+
+            <div>
+
+                <h2>
+                    Job Opportunities
+                </h2>
+
+                <p id="resultsText">
+                    Search for jobs to get started.
+                </p>
+
+            </div>
+
+
+            <button
+                id="resetButton"
+                class="reset-button"
+            >
+                Reset
+            </button>
+
+        </div>
+
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loading"
+            class="state-message hidden"
+        >
+
+            <div class="spinner"></div>
+
+            <p>
+                Finding the latest job opportunities...
+            </p>
+
+        </div>
+
+
+
+        <!-- ERROR -->
+
+        <div
+            id="error"
+            class="state-message error-message hidden"
+        >
+
+            <h3>
+                Something went wrong
+            </h3>
+
+            <p id="errorText"></p>
+
+        </div>
+
+
+
+        <!-- EMPTY -->
+
+        <div
+            id="empty"
+            class="state-message hidden"
+        >
+
+            <h3>
+                No jobs found
+            </h3>
+
+            <p>
+                Try changing your job role, location,
+                experience or posting-date filters.
+            </p>
+
+        </div>
+
+
+
+        <!-- JOB CARDS -->
+
+        <div
+            id="jobsContainer"
+            class="jobs-grid"
+        ></div>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Smart Job Finder © 2026
+        </p>
+
+        <p>
+            Built with FastAPI, Python, HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+
+    <script src="/static/script.js"></script>
+
+
+</body>
+
+</html>
